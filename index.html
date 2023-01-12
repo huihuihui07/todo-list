@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task List</title>
+    <link rel="icon" type="image/png" href="favicon.png" />
+
+    <!-- Old Favicon - Grab Icon From Google (Might be unsupported in the future) -->
+    <!-- <link rel="icon" type="image/png" href="https://s2.googleusercontent.com/s2/favicons?domain=jacinto.design"> -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- App Wrapper -->
+    <main class="app">
+      <!-- Greeting -->
+      <section class="greeting">
+        <h2 class="title">
+          What's up,
+          <input class="owner-name" placeholder="Name here" type="text" />
+        </h2>
+      </section>
+
+      <!-- new Todo -->
+      <section class="create-todo">
+        <div class="create-todo">
+          <h3>CREATE A TODO</h3>
+        </div>
+
+        <form action="" id="new-todo-form">
+          <h4>What's on your todo list?</h4>
+
+          <input
+            type="text"
+            class="tasks"
+            placeholder="e.g. do some coding"
+            name="content"
+            id="content"
+          />
+
+          <h4>Pick a category</h4>
+
+          <div class="options">
+            <label>
+              <input
+                type="radio"
+                name="category"
+                id="category1"
+                value="business"
+              />
+              <span class="bubble business"></span>
+              <div>Business</div>
+            </label>
+            <label>
+              <input
+                type="radio"
+                name="category"
+                id="category2"
+                value="personal"
+              />
+              <span class="bubble personal"></span>
+              <div>Personal</div>
+            </label>
+          </div>
+
+          <input type="submit" value="add Todo" class="add-todo-button"/>
+        </form>
+      </section>
+      <!-- End of New Todo -->
+
+      <!-- Todo List -->
+      <section class="todo-list">
+        <h3>TODO LIST</h3>
+        <div class="list" id="todo-list">
+          <label>
+            <input type="checkbox" />
+            <span class="bubble business"></span>
+          </label>
+
+          <div class="todo-content">
+            <input type="text" value="Do some coding" readonly />
+          </div>
+          <div class="actions">
+            <button class="edit">Edit</button>
+            <button class="delete">Delete</button>
+          </div>
+        </div>
+
+        <div class="list" id="todo-list">
+          <label>
+            <input type="checkbox" />
+            <span class="bubble personal"></span>
+          </label>
+
+          <div class="todo-content">
+            <input type="text" value="Get some milk" readonly />
+          </div>
+          <div class="actions">
+            <button class="edit">Edit</button>
+            <button class="delete">Delete</button>
+          </div>
+        </div>
+      </section>
+      <!-- End of Todo List -->
+    </main>
+    <!-- End of App Wrapper -->
+
+    <!-- JS Import -->
+    <script src="script.js"></script>
+  </body>
+</html>
